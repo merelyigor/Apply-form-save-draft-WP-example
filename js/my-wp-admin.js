@@ -24,12 +24,6 @@ $(document).ready(function () {
                 type: 'POST',
                 success: function (success) {
                     console.log('success', success)
-                    //form.get(0).reset();
-                    //let $popup = document.querySelector('#modal-getRequest');
-                    //$.fancybox.open($popup);
-                    //setTimeout(function () {
-                    //    $.fancybox.close($popup);
-                    //}, 5000);
                 }
             });
         })
