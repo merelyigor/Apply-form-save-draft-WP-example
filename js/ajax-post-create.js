@@ -33,20 +33,12 @@ $(document).ready(function () {
             success: function (success) {
                 let parsed_data = JSON.parse(success);
                 let url_redirect = parsed_data.data.url;
-
-
                 if (url_redirect !== false) {
                     document.location.replace(url_redirect);
                 }
-
-
-                console.log(url_redirect);
-                //form.get(0).reset();
-                //let $popup = document.querySelector('#modal-getRequest');
-                //$.fancybox.open($popup);
-                //setTimeout(function () {
-                //    $.fancybox.close($popup);
-                //}, 5000);
+                if (parsed_data.data.$submit_value === 'Apply') {
+                    document.location.reload();
+                }
             }
         });
     }
